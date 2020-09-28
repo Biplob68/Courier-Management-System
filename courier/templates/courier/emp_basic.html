@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>{% block title%} {% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700|Oswald:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../static/courier/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="../../static/courier/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../static/courier/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="../../static/courier/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../static/courier/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../static/courier/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="../../static/courier/css/aos.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../../static/courier/css/style.css">
+    <link rel="stylesheet" href="../../static/courier/css/style1.css">
+    <link rel="stylesheet" href="../../static/courier/css/style2.css">
+    <link rel="stylesheet" href="../../static/courier/css/style_track.css">
+    <link rel="stylesheet" href="../../static/courier/css/style_voucher.css">
+
+  {% block css %} {% endblock %}
+
+  </head>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+   {% load static %}
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+
+
+       <header class="site-navbar js-sticky-header site-navbar-target top-bar bg-light" role="banner">
+
+        <div class="container">
+          <div class="row align-items-center position-relative">
+
+
+            <div class="site-logo">
+              <a href="#" class="text-black"><span class="text-primary"></span>Courier</a>
+            </div>
+
+            <div class="col-12">
+              <nav class="site-navigation text-right ml-auto " role="navigation">
+
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+
+                            <li></li><a class="nav-item nav-link active" href="{% url 'emp_home' %}">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a class="nav-item nav-link" href="{% url 'update_order' %}">Update</a></li>
+
+                            <li><a class="nav-item nav-link " href="{% url 'add_order' %}">Add Order</a></li>
+
+                            <li>
+						<a href="#" data-toggle="modal" data-target="#myModal1">
+						<span class="fa fa-unlock-alt" aria-hidden="true"></span> Pending orders </a>
+				  </li>
+                            <li><a href="/logout">Logout</a></li>
+
+                </ul>
+              </nav>
+
+            </div>
+
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+
+          </div>
+        </div>
+
+      </header>
+    {% block body %} {% endblock %}
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+			<!-- Modal content-->
+            <div class="modal-content">
+
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+                <div class="modal-body modal-body-sub_agile">
+
+
+					<ul class="list-group" id="items">
+                      <li class="list-group-item d-flex justify-content-between align-items-center text-black">
+                          <span>Order id</span>
+                          <span>Placed time</span>
+                      </li>
+               {% for i in orders %}
+                <!-- list group item-->
+                <a href="{% url 'pending_order' order_id=i.order_id %}"><li class="list-group-item d-flex justify-content-between align-items-center">
+
+                  <span class="badge badge-primary badge-pill">{{ i.order_id }}</span>
+                  <span class="badge badge-primary badge-pill">{{ i.time }}</span></li></a>
+                     {% endfor %}
+                    </ul>
+
+
+			<!-- //Modal content-->
+            </div>
+	</div>
+
+    </div>
+
+    <script src="../../static/courier/js/jquery-3.3.1.min.js"></script>
+    <script src="../../static/courier/js/popper.min.js"></script>
+    <script src="../../static/courier/js/bootstrap.min.js"></script>
+    <script src="../../static/courier/js/owl.carousel.min.js"></script>
+    <script src="../../static/courier/js/jquery.sticky.js"></script>
+    <script src="../../static/courier/js/jquery.waypoints.min.js"></script>
+    <script src="../../static/courier/js/jquery.animateNumber.min.js"></script>
+    <script src="../../static/courier/js/jquery.fancybox.min.js"></script>
+    <script src="../../static/courier/js/jquery.easing.1.3.js"></script>
+    <script src="../../static/courier/js/aos.js"></script>
+
+    <script src="../../static/courier/js/main.js"></script>
+   {% block js %} {% endblock %}
+
+  </body>
+
+</html>
+
+

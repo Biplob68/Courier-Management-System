@@ -1,0 +1,82 @@
+{% extends 'courier/emp_basic.html' %}
+
+{% block title%} New Order {% endblock %}
+{% block body %}
+    <div class = "container">
+        <div class="col my-4">
+        <h2 style="color: #000000"><strong> Sender details </strong></h2>
+        <form method="post" action="/add_order/">{% csrf_token %}
+            <input type="hidden" name="itemsJson" id="itemsJson">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="s_name" name = "s_name" placeholder="Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="tel" class="form-control" id="s_phone" name="s_phone" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="s_address" name="s_address" placeholder="Address">
+            </div>
+
+
+            <h2 style="color: #000000"><strong> Receiver details </strong></h2>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="r_name" name = "r_name" placeholder="Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="tel" class="form-control" id="r_phone" name="r_phone" placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="r_address" name="r_address" placeholder="Address">
+            </div>
+
+
+
+            <h3 class="label_next">Delivery Information</h3>
+            <div class="form-group col-md-6">
+
+                <select class="form-control" id="product_name" name="product_name">
+                <option> Select product </option>
+                 {% for i in product %}
+                <option>{{i.product_name}}</option>
+                    {% endfor %}
+                <option>others</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <input type="number" step="any" class="form-control" id="weight",name="weight" placeholder="Weight">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="number" step="any" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="number" step="any" class="form-control" id="price" name="price" placeholder="Price">
+                </div>
+            </div>
+            <div class="wpcf7-form-control-wrap other-info">
+                <textarea name="other-info" cols="20" rows="5"
+                          id="other-info" aria-invalid="false"
+                          placeholder="Describe your product (Any Other Information)"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    </div>
+
+{% endblock %}
+{% block js %}
+<script>
+
+{% if thank %}
+alert('Thanks for ordering with us. Your order is  {{id}}. Use it to track your order using our order tracker');
+
+{% endif %}
+</script>
+{% endblock %}

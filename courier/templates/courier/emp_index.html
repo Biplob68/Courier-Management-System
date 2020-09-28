@@ -1,0 +1,24 @@
+{% extends 'courier/emp_basic.html' %}
+
+{% block title%} home {% endblock %}
+{% block body %}
+  <div class="ftco-cover-1 overlay" style="background-image: url('https://source.unsplash.com/pSyfecRCBQA/1920x780')">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6">
+                    <h1>Create report of the day </h1>
+                <form method="post"  action="/report/" my-2>{% csrf_token %}
+                  <input type="hidden" name="itemJson" id="itemJson">
+                  <div class="form-group d-flex">
+                    <input type="date" class="form-control" id="date" name="date" placeholder="Select a date">
+                    <input type="submit"  class="btn btn-primary text-white px-4" value="Create">
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+{% endblock %}

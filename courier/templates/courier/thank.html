@@ -1,0 +1,37 @@
+{% extends 'courier/basic.html' %}
+
+{% block title %} Thanks {% endblock %}
+{% block css %}
+    <style>
+        body {
+            background-color: #9cf5ff;
+        }
+
+        h1 {
+            color: #c548ba;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            text-align: center;
+
+        }
+
+    </style>
+    {% endblock %}
+{% block body %}
+
+
+<div style="height: 600px;background-color: rgba(125,216,255,0.56); " class="jumbotron text-center">
+
+
+    <h1 style="font-size:80px"; class="display-3">Thank You!</h1>
+
+    <p style="font-size: 30px" class="lead"><strong>For ordering with Us.</strong> Use the tracking number to track
+        your Order...</p>
+    <p style="font-size:60px" class="display-3">Tracking number : {{ id }}</p>
+
+</div>
+
+{% endblock %}

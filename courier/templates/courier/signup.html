@@ -1,0 +1,16 @@
+{% extends 'courier/basic.html' %}
+
+{% block title%} Sign up {% endblock %}
+{% load crispy_forms_tags %}
+{% block body %}
+    <div class="container">
+
+       <h3 class="agileinfo_sign">Sign Up</h3>
+       <form method="post" class="form-group">
+         {% csrf_token %}
+         {{ form | crispy}}
+           {{ profile_form | crispy }}
+         <button type="submit" class="btn btn-success">Sign up</button>
+       </form>
+    </div>
+{% endblock %}

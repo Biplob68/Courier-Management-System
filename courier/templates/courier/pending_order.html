@@ -1,0 +1,86 @@
+{% extends 'courier/emp_basic.html' %}
+
+{% block title%} pending order {% endblock %}
+{% block body %}
+
+ <div class="">
+
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+
+     <ul class="list-group shadow">
+        <!-- list group item-->
+        <li class="list-group-item">
+          <!-- Custom content-->
+          <div class="media align-items-lg-center flex-column flex-lg-row p-3">
+            <div class="media-body order-2 order-lg-1">
+              <h5 class="mt-0 font-weight-bold mb-2">Order id : {{ pending_order_details.order_id}}</h5>
+              <p class="font-italic text-muted mb-0 small"></p>
+              <p class="font-weight-bold my-2">Time : {{ pending_order_details.dateTime }}</p>
+              <p class="font-weight-bold my-2">Product : {{ pending_order_details.product_name }}</p>
+              <p class="font-weight-bold my-2">Weight : {{ pending_order_details.weight }}</p>
+
+              <p class="font-weight-bold my-2">Quantity : {{ pending_order_details.quantity }}</p>
+                <p class="font-weight-bold my-2">Description : {{ pending_order_details.description }}</p>
+               </div>
+              <div class="media-body order-2 order-lg-1">
+                  <h1>From:</h1>
+                  <p class="font-weight-bold my-2">Name : {{ pending_order_details.sender_name }}</p>
+                <p class="font-weight-bold my-2">Address : {{ pending_order_details.sender_address }}</p>
+                <p class="font-weight-bold my-2">Phone: {{ pending_order_details.sender_phone }}</p>
+
+              </div>
+              <div class="media-body order-2 order-lg-1">
+                <h1>To:</h1>
+                  <p class="font-weight-bold my-2">Name : {{ pending_order_details.receiver_name }}</p>
+                <p class="font-weight-bold my-2">Address : {{ pending_order_details.receiver_address }}</p>
+                <p class="font-weight-bold my-2">Phone: {{ pending_order_details.receiver_phone }}</p>
+
+              </div>
+
+
+          </div>
+        </li>
+     </ul>
+    </div>
+  </div>
+
+       <div class="container">
+         <form method="post" action="/update_order/">{% csrf_token %}
+            <input type="hidden" name="itemsJson" id="itemsJson">
+            <div class="form-row my-2">
+
+                <div class="form-group col-md-4">
+                   <input type="text" class="form-control" id="location" name="location" placeholder="location">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <select class="form-control" id="update_status" name="update_status">
+                <option> Select status </option>
+                <option> Confirmed Order </option>
+                <option>Picked-up</option>
+                <option>Dispatched Product</option>
+                <option>Reached Product</option>
+                <option>Delivered Product</option>
+                </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="number" class="form-control" style="display: none" id="order_id" name="order_id" value="{{ pending_order_details.order_id }}" placeholder="order_id">
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="desc" name="desc" placeholder="Description">
+            </div>
+            <button type="submit" name="update" class="btn btn-primary">Confirm</button>
+        </form>
+
+       </div>
+</div>
+{% endblock %}
+
+
+
+
+

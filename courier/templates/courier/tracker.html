@@ -1,0 +1,86 @@
+{% extends 'courier/basic.html' %}
+
+{% block title %} Track {% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="content">
+
+            <div class="content1">
+                <h2>Order Tracking: {{ orderId }}</h2>
+            </div>
+            <div class="content2">
+
+                <div class="content2-header1">
+                    {% for i in updates %}
+                        {% if forloop.last %}
+                            <h2 style="color: black">Status : <span>{{ i.status }}</span></h2>
+                            </div>
+                        {% endif %}
+
+                        <!-- End -->
+                    {% endfor %}
+                <div class="content2-header1">
+                    <p>Expected Date : <span>3 days after picked-up</span></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="content3">
+                {% if most_update.status == 'Placed Order' %}
+                    <img src="../../static/courier/images/placed.PNG" alt="Placed">
+                {% endif %}
+                {% if most_update.status == 'Confirmed Order' %}
+                    <img src="../../static/courier/images/confirmed.PNG" alt="confirmed">
+                {% endif %}
+                {% if most_update.status == 'Picked-up' %}
+                    <img src="../../static/courier/images/picked-up.PNG" alt="Picked-up">
+                {% endif %}
+                {% if most_update.status == 'Dispatched Product' %}
+                    <img src="../../static/courier/images/dispatched.PNG" alt="Dispatched Product">
+                {% endif %}
+            {% if most_update.status == 'Reached Product' %}
+                    <img src="../../static/courier/images/reached.PNG" alt="Reached Product">
+                {% endif %}
+            {% if most_update.status == 'Delivered Product' %}
+                    <img src="../../static/courier/images/delivered.PNG" alt="Delivered Product">
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="content my-0 ">
+            <div class="content1 ">
+                <h2>History of Order Id : {{ orderId }}</h2>
+            </div>
+            <!-- <div class="col-lg-8 mx-auto">List group-->
+            <ul class="list-group" id="items">
+                <li class="list-group-item d-flex justify-content-between align-items-center text-black">
+                    <span>Location</span>
+                    <span>Time</span>
+                    <span>Status</span>
+                </li>
+                {% for i in updates %}
+                    <!-- list group item-->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                        <span class="badge badge-primary badge-pill">{{ i.location }}</span>
+                        <span class="badge badge-primary badge-pill">{{ i.time }}</span>
+                        <span class="badge badge-primary badge-pill">{{ i.status }}</span>
+
+                    </li>
+                    {% if forloop.last %}
+                        <li class="my-2"></li>
+                        <li class="text-lg-center text-black my-2"> ## {{ i.update_desc }}</li>
+
+                    {% endif %}
+
+                    <!-- End -->
+                {% endfor %}
+
+                <div>
+
+
+                </div>
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}
