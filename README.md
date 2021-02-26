@@ -1,8 +1,6 @@
 # Courier-management-system
 
-Courier Management System is the simplest solution for Courier & Cargo Tracking Business. This Courier Management System project will have different modules.
-The login section will have login facility for the admin who will operate this system and online tracking system of consignment and shipping detail for domestic shipping.
-While taking orders from its customers, it will take all the details of its customers who is placing the orders and all the details for the recipient such as its address, name, mobile number.
+
 It is a courier system where the customer can order any product to be shipped to the courier at home. When the order is completed by the customer, the courier authority will collect the goods from the customer's home through their arrangements and will take a certain amount of money for the specified product and pay the money receipt.
 
 
