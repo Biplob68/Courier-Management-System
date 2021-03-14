@@ -1,6 +1,5 @@
 # Courier-management-system
 
-
 It is a courier system where the customer can order any product to be shipped to the courier at home. When the order is completed by the customer, the courier authority will collect the goods from the customer's home through their arrangements and will take a certain amount of money for the specified product and pay the money receipt.
 
 
@@ -20,7 +19,7 @@ Then why don’t we help them in searching & getting products online. Of course 
 
 # Feature of courier management system
 ⦁	Provides the searching facilities based on various factors. Such as Track Id, date of receiving and time.
-⦁	Courier management system also manage the track id details online for date details, receiving details, product details
+⦁	Courier management system also manage the track id details online for date details, receiving details, product details.
 ⦁	It tracks all the information of Track id, date of receiving and time etc.
 ⦁	Manage the information of delivery.
 ⦁	Shows the information and description of the customers.
