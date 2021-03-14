@@ -11,20 +11,20 @@ Nowadays, people are very busy and they don’t find much time to go to a dealer
 Then why don’t we help them in searching & getting products online. Of course this is helpful for company & dealer also to improve the sales.
 
 # Actors /Users of the System
-⦁	Admin
-⦁	Employees
-⦁	Offices/Branches 
-⦁	Customers 
+* Admin
+* Employees
+* Offices/Branches 
+*	Customers 
 
 
 # Feature of courier management system
-⦁	Provides the searching facilities based on various factors. Such as Track Id, date of receiving and time.
-⦁	Courier management system also manage the track id details online for date details, receiving details, product details.
-⦁	It tracks all the information of Track id, date of receiving and time etc.
-⦁	Manage the information of delivery.
-⦁	Shows the information and description of the customers.
-⦁	Manage the information of product weight and prices for shipping.
-⦁	Create Voucher for the customer.
-⦁	Provides order facilities for a courier.  
-⦁	Editing, adding and uploading of Records is improved which results in proper resource management of courier management system data.
-⦁	Integration of all records of courier.
+* Provides the searching facilities based on various factors. Such as Track Id, date of receiving and time.
+*	Courier management system also manage the track id details online for date details, receiving details, product details.
+*	It tracks all the information of Track id, date of receiving and time etc.
+*	Manage the information of delivery.
+*	Shows the information and description of the customers.
+*	Manage the information of product weight and prices for shipping.
+*	Create Voucher for the customer.
+*	Provides order facilities for a courier.  
+*	Editing, adding and uploading of Records is improved which results in proper resource management of courier management system data.
+*	Integration of all records of courier.
