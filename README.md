@@ -2,6 +2,8 @@
 
 #### It is a courier system where the customer can order any product to be shipped to the courier at home. When the order is completed by the customer, the courier authority will collect the goods from the customer's home through their arrangements and will take a certain amount of money for the specified product and pay the money receipt.
 
+![home](https://user-images.githubusercontent.com/66861180/117041173-8109c700-ad2c-11eb-990a-73c2bdfcb7aa.PNG)
+
 
 ### Purpose of Courier Management System 
 The Courier management system will be used for day to day activities like out return, company details, hub rates, booking, non-delivery, and pickup centers. Actually it is not easy to do this process manually because it would become very hectic. Hence it is recommended to automate the process by developing the relevant software as the world is moving from manual working to information and technology era where computerization becomes important in all walks of life.
