@@ -28,3 +28,5 @@ Then why don’t we help them in searching & getting products online. Of course 
 *	Provides order facilities for a courier.  
 *	Editing, adding and uploading of Records is improved which results in proper resource management of courier management system data.
 *	Integration of all records of courier.
+
+https://github.com/Biplob68/Courier-Management-System/blob/main/Sreenshort%20of%20the%20website/home.PNG
