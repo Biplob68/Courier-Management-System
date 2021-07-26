@@ -1,6 +1,6 @@
                                                           " Courier-management-system "
 
-#### It is a courier system where the customer can order any product to be shipped to the courier at home. When the order is completed by the customer, the courier authority will collect the goods from the customer's home through their arrangements and will take a certain amount of money for the specified product and pay the money receipt.
+#### It is a courier system where the customer can order any product to be shipped to the courier at home. When the order is completed by the customer, the courier authority will collect the goods from the customer's home through their arrangements and will take a certain amount of money for the specified product and pay the money receipt. Then the customer can track their product by a tracking number.
 
 ![home](https://user-images.githubusercontent.com/66861180/117041173-8109c700-ad2c-11eb-990a-73c2bdfcb7aa.PNG)
 
