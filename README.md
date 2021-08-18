@@ -1,25 +1,25 @@
-                                                          " Courier-management-system "
+                                                       Courier Management System
 
-#### It is a courier system where the customer can order any product to be shipped to the courier at home. When the order is completed by the customer, the courier authority will collect the goods from the customer's home through their arrangements and will take a certain amount of money for the specified product and pay the money receipt. Then the customer can track their product by a tracking number.
+#### _It is a courier system where the customer can order any product to be shipped to the courier at home. When the order is completed by the customer, the courier authority will collect the goods from the customer's home through their arrangements and will take a certain amount of money for the specified product and pay the money receipt. Then the customer can track their product by a tracking number._
 
 ![home](https://user-images.githubusercontent.com/66861180/117041173-8109c700-ad2c-11eb-990a-73c2bdfcb7aa.PNG)
 
 
-### Purpose of Courier Management System 
-The Courier management system will be used for day to day activities like out return, company details, hub rates, booking, non-delivery, and pickup centers. Actually it is not easy to do this process manually because it would become very hectic. Hence it is recommended to automate the process by developing the relevant software as the world is moving from manual working to information and technology era where computerization becomes important in all walks of life.
+## _Purpose of Courier Management System:_
+_The Courier management system will be used for day to day activities like out return, company details, hub rates, booking, non-delivery, and pickup centers. Actually it is not easy to do this process manually because it would become very hectic. Hence it is recommended to automate the process by developing the relevant software as the world is moving from manual working to information and technology era where computerization becomes important in all walks of life._
 
-### Why the New System?
-Nowadays, people are very busy and they don’t find much time to go to a dealer to get products. But they need to buy products. And most of the people are accessing Internet. 
-Then why don’t we help them in searching & getting products online. Of course this is helpful for company & dealer also to improve the sales.
+## _Why the New System?:_
+_Nowadays, people are very busy and they don’t find much time to go to a dealer to get products. But they need to buy products. And most of the people are accessing Internet. 
+Then why don’t we help them in searching & getting products online. Of course this is helpful for company & dealer also to improve the sales._
 
-### Actors /Users of the System
+## _Actors /Users of the System:_
 * Admin
 * Employees
 * Offices/Branches 
 *	Customers 
 
 
-### Feature of courier management system
+## _Feature of courier management system:_
 * Provides the searching facilities based on various factors. Such as Track Id, date of receiving and time.
 *	Courier management system also manage the track id details online for date details, receiving details, product details.
 *	It tracks all the information of Track id, date of receiving and time etc.
